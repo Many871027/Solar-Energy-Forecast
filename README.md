@@ -1,0 +1,44 @@
+# Solar Energy Forecast
+
+This project develops a highly accurate solar power prediction model for the Copper Mountain solar plant using machine learning, specifically the XGBoost algorithm. The model leverages a robust data integration, feature engineering, and model training approach using the provided Python scripts.
+
+## Key Highlights
+
+*   **Accurate Prediction:** Achieved an RMSE of 2.13 MWh and an R² of 0.99 using XGBoost.
+*   **Data-Driven:** Utilizes high-resolution weather data from NSRDB (obtained via `h5pyd`) and historical production data from EIA (although not explicitly part of this script).
+*   **Optimized Features:** Includes cyclic, lagged, and rolling variables for enhanced model performance, as seen in the provided script's feature engineering process.
+*   **Economic Impact:** Estimated to increase annual net profit by $42,000 due to improved operational efficiency.
+
+## Project Overview
+
+This project focuses on creating a machine learning model to predict the solar power output of the Copper Mountain solar plant. The model is designed to optimize plant operation, maintenance, and energy market interactions. The core functionality includes extracting and processing data from NSRDB (as demonstrated in the example script), feature engineering, model training, and generating predictions.
+
+## Script Explanation
+
+The provided Python script demonstrates how to:
+
+1.  **Connect to NSRDB:** Connects to the National Solar Radiation Database using `h5pyd` to access solar data.
+2.  **Extract Data:** Retrieves data, such as GHI, DNI, DHI, and other meteorological variables, for the specific coordinates of the Copper Mountain solar plant.
+3.  **Data Preprocessing:** Transforms the extracted data into a pandas DataFrame and converts the time index.
+4. **Feature Engineering:** Creates cyclic variables, lagged features, and rolling statistics.
+5.  **Model Prediction:** Demonstrates how to load a pre-trained XGBoost model (`modelo_xgb_entrenado.pkl`) and use it to predict solar power generation based on the engineered features.
+6.  **Visualize Prediction:** Shows how to visualize results of the prediction.
+
+## Methodology
+
+1.  **Data Integration:** Data from NSRDB is accessed directly via `h5pyd`, selecting variables relevant for solar power prediction.
+2.  **Exploratory Data Analysis (EDA):** Includes exploration of variable relationships and the handling of missing values, although the EDA is not shown here explicitly but is done in other notebook files of the project
+3.  **Feature Engineering:**  Cyclic, lagged, and rolling features are created as seen in the provided python code to improve model accuracy.
+4.  **Model Selection:** Linear Regression, Random Forest, and XGBoost models were evaluated, with XGBoost demonstrating the best performance, as noted in the "Key Highlights" section.
+5.  **Model Deployment:** The trained model is used to make predictions on new data.
+6. **Performance Visualization:** Monthly prediction of solar power is visualized.
+7.  **Key Drivers:**  Identified Global Horizontal Irradiance (GHI) and solar zenith angle as the main drivers for solar power production (based on the full project analysis).
+
+## Benefits
+
+*   **Optimized Maintenance:** Predictive insights for proactive maintenance scheduling.
+*   **Improved Market Management:** Enhanced decision-making for energy trading and grid commitments.
+*   **Reduced Penalties:** Improved compliance with grid agreements, reducing potential financial penalties.
+*   **Enhanced Storage Management:** Supports better battery utilization.
+
+## Repository Structure
