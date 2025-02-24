@@ -5,13 +5,13 @@ This project develops a highly accurate solar power prediction model for the Cop
 ## Key Highlights
 
 *   **Accurate Prediction:** Achieved an RMSE of 2.13 MWh and an R² of 0.99 using XGBoost.
-*   **Data-Driven:** Utilizes high-resolution weather data from NSRDB (obtained via `h5pyd`) and historical production data from EIA (although not explicitly part of this script).
+*   **Data-Driven:** Utilizes high-resolution weather data from NSRDB (obtained via `h5pyd`) and historical production data from EIA.
 *   **Optimized Features:** Includes cyclic, lagged, and rolling variables for enhanced model performance, as seen in the provided script's feature engineering process.
 *   **Economic Impact:** Estimated to increase annual net profit by $42,000 due to improved operational efficiency.
 
 ## Project Overview
 
-This project focuses on creating a machine learning model to predict the solar power output of the Copper Mountain solar plant. The model is designed to optimize plant operation, maintenance, and energy market interactions. The core functionality includes extracting and processing data from NSRDB (as demonstrated in the example script), feature engineering, model training, and generating predictions.
+This project focuses on creating a machine learning model to predict the solar power output of the Copper Mountain solar plant. The model is designed to optimize plant operation, maintenance, and energy market interactions. The core functionality includes extracting and processing data from NSRDB, feature engineering, model training, and generating predictions.
 
 ## Script Explanation
 
@@ -32,7 +32,7 @@ The provided Python script demonstrates how to:
 4.  **Model Selection:** Linear Regression, Random Forest, and XGBoost models were evaluated, with XGBoost demonstrating the best performance, as noted in the "Key Highlights" section.
 5.  **Model Deployment:** The trained model is used to make predictions on new data.
 6. **Performance Visualization:** Monthly prediction of solar power is visualized.
-7.  **Key Drivers:**  Identified Global Horizontal Irradiance (GHI) and solar zenith angle as the main drivers for solar power production (based on the full project analysis).
+7.  **Key Drivers:**  Identified Global Horizontal Irradiance (GHI) and solar zenith angle as the main drivers for solar power production.
 
 ## Benefits
 
@@ -41,4 +41,3 @@ The provided Python script demonstrates how to:
 *   **Reduced Penalties:** Improved compliance with grid agreements, reducing potential financial penalties.
 *   **Enhanced Storage Management:** Supports better battery utilization.
 
-## Repository Structure
